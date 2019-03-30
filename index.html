@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- Link to Bootstrap API -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="Images/style.css">
+</head>
+
+<body>
+
+    <div class=row>
+
+        <div class=col-2></div>
+        <div class=col-8>
+
+            <div class="jumbotron" id=jumbotron2>
+
+                <div id="header">
+                <!-- Icon -->
+                <img id="image1" src="Images/newspaper.png" alt="newspaper icon" width="40px">
+                <h1 class="display-4">New York Times Search</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class=col-2></div>
+
+    </div>
+
+    <div class=row>
+
+
+        <div class=col-2></div>
+        <div class=col-8>
+
+            <div class=form>
+
+                <div class=jumbotron>
+                    <form>
+                        <div class="form-group">
+                            <img src="Images/newspaper.png" alt="newspaper icon" width="15px"><h3>Search Parameters:</h3>
+                            <label for="searchterm">Search Term:</label>
+                            <input class="form-control" id="searchterm">
+                        </div>
+                        <div class="form-group">
+                            <label for="records">Number of Records to Retrieve:</label>
+                            <select class="form-control" id="records">
+
+                            </select>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect2">Start year (optional)</label>
+                            <input class="form-control" id="startyear">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">End year (optional)</label>
+                            <input class="form-control" id="endyear">
+                        </div>
+
+                        <img src="../Instructions/Images/magnifier.png" alt="magnifying glass" width=15px> <a
+                            href="" id="search">Search</a> <img src="../Instructions/Images/bin.png" alt="trash bin" width=15px> <a
+                            href="" id="clear">Clear Results</a>
+                    </form>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class=col-2></div>
+
+    </div>
+
+
+
+    <div class=row>
+
+
+        <div class=col-2></div>
+        <div class=col-8>
+
+
+            <div class="jumbotron" id="jumbotron3">
+                <!-- Icon -->
+                <img src="Images/newspaper.png" alt="newspaper icon" width="15px"><h3>Top Articles</h3>
+
+                <div id="articles">
+
+                <div id="curentarticles">
+                    <div id="box">
+                        1
+                    </div>
+
+                    <a id="currentheader">
+                        header
+                    </a>
+
+                    <div id="author">
+                        by associated press
+                    </div>
+                    
+                </div>
+
+        
+
+
+                </div>
+
+            </div>
+
+            <footer>Made with lots and lots of ❤️</footer>
+
+        </div>
+
+        <div class=col-2></div>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="searchnyt.js"></script>
+    <script>
+        $(function(){
+            for (var i = 1; i <= 10; i++) {
+                var $opt = $("<option>");
+                $opt.val(i);
+                $opt.text(i);
+                if (i === 5) {
+                    $opt.attr("selected", true);
+                }
+                $("#records").append($opt);
+            }
+        })
+    </script>
+    
+</body>
+
+</html>
